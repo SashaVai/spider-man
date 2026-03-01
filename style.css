@@ -1,0 +1,333 @@
+@font-face {
+    font-family: "RussoOne";
+    src: url("fonts/RussoOne-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Spider-Man";
+    src: url("fonts/Spider-Man.otf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "RussoOne";
+}
+
+body {
+    background: var(--bg-color);
+}
+
+html {
+    font-size: 25px;
+}
+
+h1 {
+    font-family: "Spider-Man";
+    font-size: 3rem;
+    line-height: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+    line-height: 2rem;
+}
+
+h3 {
+    font-size: 1rem;
+    line-height: 1rem;
+}
+
+:root {
+    --container-color: #000;
+    --bg-color: #222;
+    --morales-color: #403E93;
+    --gwen-color: #EC9DF9;
+    --parker-color1: #FF2D2D;
+    --parker-color2: #093FFF;
+    --penny-color: #F21198;
+    --black-text-color: #222;
+    --white-text-color: #fff;
+    --pig-color: #13A39A;
+}
+
+.site-container {
+    background: var(--container-color);
+    width: 1007px;
+    margin: auto;
+    padding: 40px;
+}
+
+.header {
+    height: 693px;
+    background: url("img/header.png") center/cover no-repeat;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 20px;
+}
+
+.header__title {
+    width: 453px;
+    color: var(--white-text-color);
+    background: var(--container-color);
+    padding: 60px;
+
+}
+
+.main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(11, 218px);
+    gap: 20px;
+    grid-template-areas:
+        "morales morales gwen gwen"
+        "parker parker gwen gwen"
+        "parker parker pig ."
+        "noir penni penni robot"
+        "noir trio trio trio"
+        "all-team all-team all-team all-team"
+        "all-team all-team all-team all-team"
+        ". versus versus versus"
+        "kingpin kingpin kingpin free-fall"
+        "kingpin kingpin kingpin free-fall"
+        "kingpin kingpin kingpin ."
+    ;
+}
+
+
+.main_morales {
+    grid-area: morales;
+    color: var(--morales-color);
+    background: url("img/morales.png") center/cover no-repeat;
+    padding: 19px 0 0 11px;
+}
+
+.main_gwen {
+    grid-area: gwen;
+    color: var(--gwen-color);
+    background: url("img/gwen.png") center/cover no-repeat;
+    padding: 19px 10px 0 11px;
+}
+
+.main_parker {
+    grid-area: parker;
+    color: var(--parker-color1);
+    background: url("img/parker.png") center/cover no-repeat;
+    display: flex;
+    align-items: flex-end;
+}
+
+.main_pig {
+    grid-area: pig;
+    background: url("img/spiderpig.png") center/cover no-repeat;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.main_noir {
+    grid-area: noir;
+    background: url("img/noir.png") center/cover no-repeat;
+}
+
+.main_penni {
+    grid-area: penni;
+    background: url("img/penni.png") center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.main_robot {
+    grid-area: robot;
+    background: url("img/spiderbot.png") center/cover no-repeat;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-align: right;
+}
+
+.main_trio {
+    grid-area: trio;
+    background: url("img/trio.png") center/cover no-repeat;
+}
+
+.main_trio-text {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-align: right;
+    padding: 20px 29px;
+    background: rgba(0,0,0,0.68);
+}
+
+.main_all-team {
+    grid-area: all-team;
+    background: url("img/allteam.png") center/cover no-repeat;
+}
+
+.main_all-team-text {
+    width: 50%;
+    height: 100%;
+    background: rgba(0,0,0,0.84);
+    backdrop-filter: blur(20px);
+    padding: 0 37px;
+    display: flex;
+    align-items: center;
+    line-height: normal;
+}
+
+.main_versus {
+    grid-area: versus;
+    background: url("img/versus.png") center/cover no-repeat;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.main_versus-text {
+    padding: 15px 17px;
+}
+
+.main_kingpin {
+    grid-area: kingpin;
+    background: url("img/kingpin.png") center/cover no-repeat;
+}
+
+.main_free-fall {
+    grid-area: free-fall;
+    background: url("img/freefall.png") center/cover no-repeat;
+}
+
+
+.main__text {
+    color: var(--white-text-color)
+}
+.main_morales-text {
+    text-shadow: 5px 5px #000;
+    color: var(--morales-color);
+}
+.main_gwen-text {
+    text-shadow: -5px 5px var(--gwen-color);
+    float: right;
+}
+.main_parker-text {
+    text-shadow: 4px 4px var(--parker-color2);
+    color: var(--parker-color1);
+    padding: 23px 11px;
+}
+.main_noir-text {
+    text-shadow: 5px -4px var(--white-text-color),
+    -5px 5px var(--white-text-color);
+    color: var(--container-color);
+    width: max-content;
+    transform-origin: left top;
+    position: relative;
+    transform: translate(72px, 90px) rotate(90deg);
+}
+.main_pig-text {
+    font-size: 1rem;
+    line-height: 1rem;
+    padding: 8px 23px;
+    text-shadow: 5px 5px var(--pig-color);
+}
+
+.main_penni-text {
+    text-shadow: 5px 5px var(--white-text-color);
+    padding: 27px 16px;
+    color: var(--penny-color);
+}
+.main_robot-text {
+    text-shadow: 5px 5px var(--penny-color);
+    font-size: 1rem;
+    line-height: 1rem;
+    padding: 20px 24px;
+}
+
+@media(max-width: 375px){
+    .header {
+        width: 100%;
+        height: 100vh;
+        align-items: center;
+    }
+
+    .header__title {
+        width: fit-content;
+    }
+
+    .site-container {
+        width: 100%;
+        padding: 0;
+    }
+
+    .main {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(16, 218px);
+        gap: 20px;
+        grid-template-areas:
+            "morales"
+            "gwen"
+            "parker"
+            "pig"
+            "noir"
+            "noir"
+            "penni"
+            "robot"
+            "trio"
+            "all-team"
+            "versus"
+            "kingpin"
+            "kingpin"
+            "free-fall"
+            "free-fall"
+            "free-fall"
+            "free-fall"
+        ;
+    }
+
+    .main_all-team {
+        display: flex;
+        align-items: flex-end;
+    }
+    
+    .main_all-team-text {
+        width: 100%;
+        height: 50%;
+        font-size: 1rem;
+
+    }
+
+    .main_noir {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        padding: 43px;
+    }
+
+    .main_noir-text {
+        transform: none;
+    }
+
+    .main_robot-text {
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+
+    .main_versus-text {
+        font-size: 1rem;
+    }
+
+    .main_pig {
+        display: block;
+    }
+
+    .main_pig-text {
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+
+}
